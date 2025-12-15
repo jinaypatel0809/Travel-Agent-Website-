@@ -38,7 +38,349 @@
             </nav>
         </div>
     </header>
-    
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content fade-in">
+            <h1>Explore the World with Us</h1>
+            <p>Discover affordable and memorable journeys to the mmost breathtaking destinations on Earth. Your dream vacation is just a click away.</p>
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <p class="section-subtitle">Discover our most sought-after travel destinations</p>
+            <div class="Destination-grid">
+                <!-- Destinations will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2 class="section-title">Tour Packages</h2>
+            <p class="section-subtitle">Choose from our carefully curated travel packages</p>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Packages</button>
+                <button class="filter-btn" data-filter="budget">Budget</button>
+                <button class="filter-btn" data-filter="luzury">Luxury</button>
+                <button class="filter-btn" data-filter="short">Short Trip</button>
+                <button class="filter-btn" data-filter="long">Long Trip</button>
+            </div>
+
+            <div class="package-grid">
+                <!-- Packages will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose US -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">We provide exceptional service to make your journey unforgettable</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>We offer the most competitive prices without compromissing on quality or experiences.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Trusted Agents</h3>
+                    <p>Our experienced travel agents have insider knowledge to create your perfect itinerary.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock assistance whenever youo need it, wherever you are in the world.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa fa-calendar-check"></i>
+                    </div>
+                    <h3>Easy Bookings</h3>
+                    <p>Simple and secure booking process with instant confirmation for peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form" id="booking">
+        <div class="container">
+            <h2 class="section-title">Book Your Dream Vacation</h2>
+            <p class="section-subtitle">Fill out the form below and our agents will contact you within 24 hours</p>
+
+            <form id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required>
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
+                        <div class="error-message" id="phone-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Destination *</label>
+                        <select id="destination" required>
+                            <option value="">Select a destination</option>
+                            <!-- Options Willl be populated by JavaScript -->
+                        </select>
+                        <div class="error-message" id="destination-error"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Travel Date *</label>
+                        <input type="date" id="date" required>
+                        <div class="error-message" id="date-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="travelers">Number of Travelers *</label>
+                        <input type="number" id="travelers" min="1" max="20" required>
+                        <div class="error-message" id="travelers-error"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Requirements</label>
+                    <textarea id="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+
+                 <div id="form-success" class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Thank you! Your booking request has been submitted successfully. Our travel agent will contact you within 24 hours.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Gallery section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Travel Gallery</h2>
+            <p class="section-subtitle">A glimpse into the amazing experiences that await you</p>
+
+            <div class="gallery-grid">
+                <!-- Gallery images will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img src="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="Testimonials" id="about">
+        <div class="container">
+            <h2 class="section-title">What Our Clients</h2>
+            <p class="section-subtitle">Hear from travelers who have experienced our exceptional service</p>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-slides">
+                    <!-- Testimonials will be populated by JavaScript -->
+                </div>
+
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <!-- Donts will be populated by JavaScript -->
+                    </div>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch with our travel experts</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Our Office</h3>
+                            <p>123 Travel Street, Adventure City, AC 10101</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                            <p>+1 (555) 9987-6543</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>info@wanderlusttravel.com</p>
+                            <p>bookings@wanderlusttravel.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p>Mon - Fri: 8:00 AM - 8:00 PM</p>
+                            <p>Sat - Sun: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="contact-name" placeholder="Your Name" required>
+                            <div class="error-message" id="contact-name-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="contact-email" placeholder="Your Email" required>
+                            <div class="error-message" id="contact-email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="contact-message" rows="5" placeholder="Your Message" required></textarea>
+                            <div class="error-message" id="contact-message-error"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        
+                        <div id="contact-success" class="success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Your message has been sent successfully. We'll get back to you soon!</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.177858804427!2d-73.98784468459418!3d40.70555197933205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a315cdf4c9b%3A0x8b934de5cae6f7a!2s123%20Travel%20St%2C%20New%20York%2C%20NY%2010006%2C%20USA!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo footer-logo">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Wanderlust<span class="logo-highlight">Travel</span></span>
+                    </div>
+                    <p>Creating unforgettable travel experiences since 2005. Your journey begins with us.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Popular Destinations</h3>
+                    <ul>
+                        <li><a href="#">Bail, Indonesia</a></li>
+                        <li><a href="#">Santorini, Greece</a></li>
+                        <li><a href="#">Kyoto, Japan</a></li>
+                        <li><a href="#">Swiss Alps</a></li>
+                        <li><a href="#">Maldives</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for travel tips and exclusive deals</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wanderlust Travel Agency. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Services</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>
